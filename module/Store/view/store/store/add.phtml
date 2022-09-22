@@ -1,0 +1,83 @@
+<div class="">
+   
+
+<div class="row mt-50">
+
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Follow Development') ?></h3>
+            </div>
+            <div class="panel-body">
+            <?php foreach ($getcities as $str) print_r($str);?>
+                        
+                <div class="form-row">
+                <div class="form-group">
+                <?php
+                $form->setAttribute('action', $this->url('store', array('action' => 'add')));
+                $form->prepare();
+
+                echo $this->form()->openTag($form);
+                echo $this->formHidden($form->get('id'));
+                echo '<div class="form-group col-md-6">';
+                echo $this->formRow($form->get('code'));
+                echo '</div>
+                <div class="form-group col-md-6">';
+                echo $this->formRow($form->get('name'));
+                echo '</div>
+                <div class="form-group col-md-12">';
+                echo $this->formRow($form->get('description'));
+                echo '</div>
+                <div class="form-group col-md-12">';
+                echo $this->formRow($form->get('URL'));     
+                echo '</div>
+                <div class="form-group col-md-12">';
+                echo $this->formRow($form->get('type'));  
+                echo '</div>
+                <div class="form-group col-md-6">';
+                echo $this->formRow($form->get('store'));               
+                echo '</div>
+                <div class="form-group col-md-6">';
+                echo $this->formRow($form->get('stock_import')); 
+                echo '</div>
+                <div class="form-group col-md-3">';
+                echo $this->formRow($form->get('country'));
+                echo '</div>
+                <div class="form-group col-md-3"> <div id="state_body">';
+                echo $this->formRow($form->get('state'));  
+                
+                echo '</div></div>
+                <div class="form-group col-md-3">';
+                echo $this->formRow($form->get('city'));
+                echo '</div>
+                <div class="form-group col-md-3">';
+                echo $this->formRow($form->get('postalcode'));  
+
+                echo '</div>
+                <div class="form-group col-md-12">';
+                echo $this->formRow($form->get('address1'));
+                echo '</div>
+                <div class="form-group col-md-12">';
+                echo $this->formRow($form->get('address2'));  
+
+                echo '</div>
+                <div class="form-group col-md-6">';
+                echo $this->formRow($form->get('store_locator'));
+
+                echo '</div>
+                <div class="form-group col-md-12">';
+                echo $this->formRow($form->get('store_image'));                  
+                echo '</div>
+                <div class="form-group col-md-12">';
+
+                echo $this->formSubmit($form->get('submit'));
+                echo '</div>';
+                echo $this->form()->closeTag();
+                ?>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

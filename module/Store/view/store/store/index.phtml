@@ -1,0 +1,42 @@
+<div class="row mt-50">
+
+ 
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Store Data</h3>
+            </div>
+            <div class="panel-body">
+           
+            <table class="table table-bordered table-responsive">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>description</th><th>URL</th><th>Type</th><th>Stock Import</th><th>Store</th><th>Address</th><th>Country</th><th>State</th><th>City</th><th>Postalcode</th><th>Store Locator</th><th>Store Image</th>
+            </tr>
+            <?php foreach ($store as $str) : ?>
+                <tr>
+                    <td><?php echo $this->escapeHtml($str->code);?></td>
+                    <td><?php echo $this->escapeHtml($str->name);?></td>
+                    <td><?php echo $this->escapeHtml($str->description);?></td>
+                    <td><?php echo $this->escapeHtml($str->URL);?></td>
+                    <td><?php echo $this->escapeHtml($str->type);?></td>
+                    <td><?php echo ($this->escapeHtml($str->stock_import)==1 ? '<span class="btn-success badge ">Enabled</span>' : '<span class="btn-danger badge ">Disabled</span>'); ?></td>
+                    <td><?php echo ($this->escapeHtml($str->store)==1 ? '<span class="btn-success badge ">Enabled</span>' : '<span class="btn-danger badge ">Disabled</span>'); ?></td>
+                    <td><?php echo $this->escapeHtml($str->address1);?></br>
+                    <?php echo $this->escapeHtml($str->address2);?></td>
+                    <td><?php echo $this->escapeHtml($str->country);?></td>
+                    <td><?php echo $this->escapeHtml($str->state);?></td>
+                    <td><?php echo $this->escapeHtml($str->city);?></td>
+                    <td><?php echo $this->escapeHtml($str->postalcode);?></td>
+                    <td><?php echo ($this->escapeHtml($str->store_locator)==1 ? '<span class="btn-success badge ">Enabled</span>' : '<span class="btn-danger badge ">Disabled</span>'); ?></td>
+                    <td><img src ="<?php echo $this->escapeHtml($str->store_image);?>" height="60" width="60"></td>
+
+                    
+                </tr>    
+            <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,93 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 40px;
+	background-color:#ededed!important;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.brand {
+    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+}
+
+
+.main-nav {margin-bottom:0px!important;}
+.inner-page {background-color:#ededed;}
+.headerpart {margin-bottom:25px;}
+.headerpart h1 {
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 20px 0;
+    padding: 20px 0;
+	font-size:28px;
+}
+.headerpart p {margin-bottom:0px;}
+#tabform .panel {background-color:transparent;border:0;}
+h4.panel-heading{border-bottom: 1px solid #ddd; margin:0 0 25px 0; padding:0 0 15px 0;}
+
+#tabform form input, #tabform form select {height:44px!important;}
+#tabform ul.nav-tabs {margin-bottom: 45px;padding-left: 30px;}
+
+#tabform .nav-tabs>li>a {
+    background: transparent!important;
+    border: 0!important;
+    font-size: 16px!important;
+    color: #505a63!important;
+    font-weight:600;
+	transition: all 0.3s;
+}
+#tabform li.active a {
+    background: transparent;
+    border: 0;
+    border-bottom: solid 4px #0dbbf7!important;
+    color: #0dbbf7!important;
+}
+
+
+.buttomsubmit {display: flex;justify-content: center;background: #fff;padding: 25px 15px;margin-top:45px; }
+.buttomsubmit div {margin: 0 5px;}
+.buttomsubmit input.buttomcancel {border: 0;color:#fff;border-radius: 6px;box-shadow:none; font-weight:600; text-transform:uppercase;min-width: 120px;}
+.buttomsubmit .buttomcancel input.buttomcancel {background-color: #e82426!important;}
+.buttomsubmit .buttonsubmit input.buttomcancel {background-color: #00af9b!important;}
+.form-row {position:relative;}
+button.delete-sec {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: 15;
+    padding: 0px 4px!important;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+	.headersummry {width:50%;margin:0 auto;}
+	#tabform .form-horizontal .control-label {text-align: left!important;}
+}
+
+.mt-50 {margin-top: 50px;}
