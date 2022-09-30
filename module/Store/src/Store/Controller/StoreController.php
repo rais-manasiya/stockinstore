@@ -69,7 +69,9 @@ class StoreController extends AbstractActionController
                         $request->getPost()->toArray(),
                         $request->getFiles()->toArray()
                     );
+                    
              $form->setData($post);
+             
              if ($form->isValid()) {
                  $Store->exchangeArray($form->getData());
                  $this->getStoreTable()->saveStore($Store);

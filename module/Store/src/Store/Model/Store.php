@@ -104,24 +104,24 @@ use Zend\Validator\File\UploadFile;
                     );
             $inputFilter->add($file);
 
-            //  $inputFilter->add(array(
-            //      'name'     => 'code',
-            //      'required' => true,
-            //      'filters'  => array(
-            //          array('name' => 'StripTags'),
-            //          array('name' => 'StringTrim'),
-            //      ),
-            //      'validators' => array(
-            //          array(
-            //              'name'    => 'StringLength',
-            //              'options' => array(
-            //                  'encoding' => 'UTF-8',
-            //                  'min'      => 1,
-            //                  'max'      => 50,
-            //              ),
-            //          ),
-            //      ),
-            //  ));
+             $inputFilter->add(array(
+                 'name'     => 'country',
+                 'required' => true,
+                 'filters'  => array(
+                     array('name' => 'StripTags'),
+                     array('name' => 'StringTrim'),
+                 ),
+                 'validators' => array(
+                     array(
+                         'name'    => 'StringLength',
+                         'options' => array(
+                             'encoding' => 'UTF-8',
+                             'min'      => 1,
+                             'max'      => 50,
+                         ),
+                     ),
+                 ),
+             ));
 
             //  $inputFilter->add(array(
             //      'name'     => 'name',

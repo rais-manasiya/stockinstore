@@ -46,7 +46,8 @@ $( document ).ready( function () {
 				maxlength: 255
 			},
 			store_image: {
-				extension: "jpg|jpeg"
+				extension: "jpg|jpeg",
+				maxsize: 300000,
 
 			},
 			
@@ -78,7 +79,9 @@ $( document ).ready( function () {
 				maxlength: "Store address must note be more than 100 characters long",
 			},
 			store_image: {
-				extension: "Please upload file in these format only (jpg, jpeg)."			}
+				extension: "Please upload file in these format only (jpg, jpeg).",
+				maxsize:" file size must be less than 300 KB."
+			}
 			
 		},
 		errorElement: "span",

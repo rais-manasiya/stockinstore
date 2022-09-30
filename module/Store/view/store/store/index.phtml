@@ -14,7 +14,8 @@
                 <th>Name</th>
                 <th>description</th><th>URL</th><th>Type</th><th>Stock Import</th><th>Store</th><th>Address</th><th>Country</th><th>State</th><th>City</th><th>Postalcode</th><th>Store Locator</th><th>Store Image</th>
             </tr>
-            <?php foreach ($store as $str) : ?>
+            <?php foreach ($store as $str) : 
+                ?>
                 <tr>
                     <td><?php echo $this->escapeHtml($str->code);?></td>
                     <td><?php echo $this->escapeHtml($str->name);?></td>

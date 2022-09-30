@@ -14,8 +14,18 @@ class StoreTable
 
     public function fetchAll()
     {
-        $resultSet = $this->tableGateway->select();
-        return $resultSet;
+    //     $resultSet = $this->tableGateway->select();
+    //     return $resultSet;
+
+        $sqlSelect = $this->tableGateway->getSql()->select();
+		$sqlSelect->columns(array('*'));
+		$sqlSelect->join('country', 'country.country_id = store.country', array(), 'inner');
+		$resultSet= $this->tableGateway->selectWith($sqlSelect);
+       
+		return $resultSet;
+
+
+        //SELECT s.*, c.name as cntname, r.name as region FROM `store` s JOIN country as c ON c.country_id = s.country JOIN region as r on r.country = c.country_id WHERE 1 GROUP by s.id 
     }
 
     public function getStore($id)
